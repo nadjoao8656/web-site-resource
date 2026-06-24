@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱游戏 · 在线电视与游戏聚合平台</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', 'Noto Serif SC', serif;
+      background-color: #f9f7f2;
+      color: #2e2b27;
+      line-height: 1.8;
+      padding: 2rem 1.5rem;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background-color: #fefdfa;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+      border-radius: 20px;
+      padding: 2.8rem 2.2rem;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      border-left: 6px solid #b08c6b;
+      padding-left: 1rem;
+      margin-bottom: 0.5rem;
+      color: #3a322c;
+    }
+
+    .subhead {
+      font-size: 1rem;
+      color: #7a6f64;
+      margin-bottom: 2.2rem;
+      border-bottom: 1px solid #ede8df;
+      padding-bottom: 1rem;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #e5ddd2;
+      color: #3f362f;
+      font-size: 0.8rem;
+      padding: 0.2rem 1rem;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      margin-bottom: 1.6rem;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      margin-bottom: 2.5rem;
+      padding: 0.6rem 0;
+      text-align: justify;
+    }
+
+    .directory-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.8rem;
+      margin: 2.5rem 0 2rem;
+    }
+
+    .dir-card {
+      background: #f4f0e9;
+      padding: 1.6rem 1.4rem;
+      border-radius: 16px;
+      transition: background 0.2s;
+    }
+
+    .dir-card:hover {
+      background: #ece5db;
+    }
+
+    .dir-card h3 {
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-bottom: 2px solid #cbb9a6;
+      padding-bottom: 0.4rem;
+      margin-bottom: 0.8rem;
+      color: #403731;
+    }
+
+    .dir-card p {
+      font-size: 0.95rem;
+      color: #4f463e;
+    }
+
+    .info-panel {
+      background: #f1ece4;
+      border-left: 5px solid #b49b83;
+      padding: 1.6rem 2rem;
+      margin: 2.2rem 0;
+      border-radius: 0 12px 12px 0;
+    }
+
+    .info-panel strong {
+      color: #3e342e;
+    }
+
+    .tip-box {
+      background: #e9e1d6;
+      border-radius: 16px;
+      padding: 1.2rem 1.6rem;
+      margin: 1.8rem 0 2.2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.8rem;
+    }
+
+    .tip-box::before {
+      content: "💡";
+      font-size: 1.5rem;
+      line-height: 1.4;
+      flex-shrink: 0;
+    }
+
+    .tip-box p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #3e3630;
+    }
+
+    .faq-block {
+      margin: 2.4rem 0 1.8rem;
+    }
+
+    .faq-item {
+      padding: 0.8rem 0;
+      border-bottom: 1px dashed #ddd6cb;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-q {
+      font-weight: 600;
+      color: #4c4139;
+    }
+
+    .faq-a {
+      margin-top: 0.2rem;
+      color: #5e5349;
+      font-size: 0.95rem;
+    }
+
+    .footnote {
+      margin-top: 2.8rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e1d9ce;
+      font-size: 0.9rem;
+      color: #6b6056;
+      text-align: center;
+    }
+
+    .footnote a {
+      color: #8f735b;
+      text-decoration: none;
+      border-bottom: 1px dotted #b8a290;
+    }
+
+    .footnote a:hover {
+      border-bottom: 2px solid #7a5f4b;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 1rem 0.8rem;
+      }
+      .page {
+        padding: 1.6rem 1.2rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      .directory-grid {
+        grid-template-columns: 1fr;
+        gap: 1.2rem;
+      }
+      .info-panel {
+        padding: 1rem 1.2rem;
+      }
+      .tip-box {
+        flex-direction: column;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .intro {
+        padding-right: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <span class="hero-badge">📺 在线电视 · 🎮 游戏聚合</span>
+    <h1>爱游戏 · 用一屏连接电视与游戏</h1>
+    <div class="subhead">一个帮你快速识别站点用途的知识型导航页</div>
+
+    <div class="intro">
+      当你第一次访问 <strong>https://onlinetv-igame.com</strong>，或许会好奇：这个网站到底是做什么的？是单纯的游戏平台，还是电视直播站？其实，它融合了两类场景——<strong>在线电视直播</strong>与<strong>网页游戏聚合</strong>。如果你也喜欢在休闲时一边开着电视当背景音，一边玩两局小游戏，那么这个叫「爱游戏」的地方正是为你准备的。下面我们从四个维度拆解它的用途。
+    </div>
+
+    <div class="directory-grid">
+      <div class="dir-card">
+        <h3>📡 电视直播区</h3>
+        <p>汇集多个中文电视频道，涵盖新闻、综艺、纪录片等类型。无需额外设备，浏览器内即可观看直播流。</p>
+      </div>
+      <div class="dir-card">
+        <h3>🎯 游戏分类库</h3>
+        <p>收录大量 H5 及 Flash 风格小游戏，按照动作、益智、休闲等分类排列，点开即玩，免下载。</p>
+      </div>
+      <div class="dir-card">
+        <h3>🔍 快速查找入口</h3>
+        <p>提供站内搜索与频道/游戏切换组件，帮助你在电视与游戏两种内容之间自由跳转。</p>
+      </div>
+      <div class="dir-card">
+        <h3>📖 使用指引</h3>
+        <p>每个页面都配有简短的说明区域，新用户可快速了解当前模块是电视还是游戏场景。</p>
+      </div>
+    </div>
+
+    <div class="info-panel">
+      <strong>相关信息 · 页面结构说明</strong><br>
+      本站首页采用<strong>“目录式布局”</strong>：上方为电视直播卡片与游戏推荐卡片，中部为快速分类标签，下方为最近更新或热门内容。整体设计强调纵向浏览与信息分区，适合第一次访问时建立整体认知。你可以在任意页面顶部找到返回首页的链接，所有电视与游戏内容均通过独立的区块呈现，方便按需选择。
+    </div>
+
+    <div class="tip-box">
+      <p><strong>提示：</strong>如果你只想快速开始，可以直接从电视直播区域挑选一个频道，或者从游戏区点击任意卡片。所有功能都在当前标签页内完成，无需跳转其他站点。建议使用 Chrome 或 Edge 浏览器以获得最佳兼容性。</p>
+    </div>
+
+    <div class="faq-block">
+      <div class="faq-item">
+        <div class="faq-q">❓ 这个网站是免费的吗？</div>
+        <div class="faq-a">是的，目前网站上的电视直播和游戏内容均为免费浏览，部分游戏可能包含内置广告，但无需付费解锁。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">❓ 电视直播会卡顿吗？</div>
+        <div class="faq-a">直播流的稳定性取决于你的网络环境及源站带宽。如果遇到卡顿，可以尝试切换清晰度或刷新页面。</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">❓ 游戏需要注册账号吗？</div>
+        <div class="faq-a">绝大多数游戏无需注册，直接点击即可开始。部分带有排行榜功能的游戏可能会提示你输入昵称，但不强制绑定个人信息。</div>
+      </div>
+    </div>
+
+    <div class="footnote">
+      想要直接体验？探索 <a href="https://onlinetv-igame.com">爱游戏</a> 的全部内容。这个站点由兴趣驱动，持续更新频道与游戏库。
+    </div>
+  </div>
+</body>
+</html>
